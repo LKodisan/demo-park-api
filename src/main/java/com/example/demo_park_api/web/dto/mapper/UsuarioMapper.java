@@ -1,10 +1,9 @@
-package com.example.demo_park_api.web.controller.dto.mapper;
+package com.example.demo_park_api.web.dto.mapper;
 
 import com.example.demo_park_api.entity.Usuario;
-import com.example.demo_park_api.web.controller.dto.UsuarioCreateDto;
-import com.example.demo_park_api.web.controller.dto.UsuarioResponseDto;
+import com.example.demo_park_api.web.dto.UsuarioCreateDto;
+import com.example.demo_park_api.web.dto.UsuarioResponseDto;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.PropertyMap;
 import org.modelmapper.TypeMap;
 
 import java.util.List;

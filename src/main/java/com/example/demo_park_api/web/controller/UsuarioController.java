@@ -2,13 +2,12 @@ package com.example.demo_park_api.web.controller;
 
 import com.example.demo_park_api.entity.Usuario;
 import com.example.demo_park_api.service.UsuarioService;
-import com.example.demo_park_api.web.controller.dto.UsuarioCreateDto;
-import com.example.demo_park_api.web.controller.dto.UsuarioResponseDto;
-import com.example.demo_park_api.web.controller.dto.UsuarioSenhaDto;
-import com.example.demo_park_api.web.controller.dto.mapper.UsuarioMapper;
+import com.example.demo_park_api.web.dto.UsuarioCreateDto;
+import com.example.demo_park_api.web.dto.UsuarioResponseDto;
+import com.example.demo_park_api.web.dto.UsuarioSenhaDto;
+import com.example.demo_park_api.web.dto.mapper.UsuarioMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
