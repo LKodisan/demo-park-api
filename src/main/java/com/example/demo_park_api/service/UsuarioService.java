@@ -35,14 +35,13 @@ public class UsuarioService {
 
     @Transactional
     public Usuario editarSenha(Long id, String senhaAtual, String novaSenha, String confirmaSenha) {
+        if (!novaSenha.equals(confirmaSenha)) {
+            throw new PasswordInvalidException("Nova senha não confere com confirmação de senha.");
+        }
 
         Usuario user = buscarPorId(id);
-
         if (!user.getPassword().equals(senhaAtual)) {
-            throw new PasswordInvalidException(String.format("Sua senha não confere."));
-        }
-        if (!novaSenha.equals(confirmaSenha)) {
-            throw new PasswordInvalidException(String.format("Nova senha não confere com confirmação de senha."));
+            throw new PasswordInvalidException("Sua senha não confere.");
         }
 
         user.setPassword(novaSenha);

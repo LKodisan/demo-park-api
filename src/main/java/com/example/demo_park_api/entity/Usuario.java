@@ -1,9 +1,10 @@
 package com.example.demo_park_api.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.management.relation.Role;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -39,6 +40,7 @@ public class Usuario implements Serializable {
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Usuario usuario = (Usuario) o;
         return Objects.equals(id, usuario.id);
@@ -46,7 +48,7 @@ public class Usuario implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id);
+        return Objects.hash(id);
     }
 
     @Override
